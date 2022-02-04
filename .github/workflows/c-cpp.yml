@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: mkdir
+      run: mkdir -p build
+    - name: cd 
+      run: cd build
+    - name: cmake
+      run: cmake ..
+    - name: make
+      run: make
