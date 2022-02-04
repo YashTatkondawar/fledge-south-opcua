@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: mkdir
-      run: mkdir -p build
+    - name: clone
+      run: git clone https://github.com/fledge-iot/fledge; cd fledge; sudo ./requirements.sh; make; pwd
     - name: make
-      run: cd build; cmake ..; make;
+      run: mkdir -p build; cd build; cmake ..; make;
 
