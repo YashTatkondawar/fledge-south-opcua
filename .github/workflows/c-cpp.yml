@@ -16,5 +16,5 @@ jobs:
     - name: clone
       run: git clone https://github.com/fledge-iot/fledge; cd fledge; sudo ./requirements.sh; make; pwd
     - name: make
-      run: mkdir -p build; cd build; cmake ..; make;
+      run: mkdir -p build; cd build; cmake ..; make
 
